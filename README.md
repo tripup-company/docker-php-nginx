@@ -1,5 +1,5 @@
 # docker-php-nginx-7.1
-Docker image configuration with php7.1, nginx, memcached lib
+Docker image configuration for laravel with php7.1, nginx, memcached lib
 ========
 This image is based on https://github.com/webdevops/Dockerfile
 If you start your application on some subpath like domain.com/myapp, you should set
