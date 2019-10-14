@@ -1,4 +1,5 @@
 FROM webdevops/php-nginx:7.1
+COPY conf/health.php /app/health.php
 COPY conf/ /opt/docker/
 
 # Install gcsfuse npm nodejs grunt
