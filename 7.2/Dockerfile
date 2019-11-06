@@ -1,6 +1,6 @@
 FROM webdevops/php-nginx:7.2
-COPY ../conf/health.php /app/health.php
-COPY ../conf/ /opt/docker/
+COPY conf/health.php /app/health.php
+COPY conf/ /opt/docker/
 
 # Install gcsfuse npm nodejs grunt
 RUN echo "deb http://packages.cloud.google.com/apt gcsfuse-jessie main" | tee /etc/apt/sources.list.d/gcsfuse.list; \
