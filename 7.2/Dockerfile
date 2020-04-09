@@ -2,6 +2,10 @@ FROM webdevops/php-nginx:7.2
 COPY conf/health.php /app/health.php
 COPY conf/ /opt/docker/
 
+RUN wget -O /usr/local/bin/php-fpm-healthcheck \
+https://raw.githubusercontent.com/renatomefi/php-fpm-healthcheck/master/php-fpm-healthcheck \
+&& chmod +x /usr/local/bin/php-fpm-healthcheck
+
 # Install gcsfuse npm nodejs grunt
 RUN echo "deb http://packages.cloud.google.com/apt gcsfuse-jessie main" | tee /etc/apt/sources.list.d/gcsfuse.list; \
     curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add -; \
