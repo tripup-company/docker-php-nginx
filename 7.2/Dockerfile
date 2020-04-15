@@ -1,5 +1,4 @@
 FROM webdevops/php-nginx:7.2
-COPY conf/health.php /app/health.php
 COPY conf/ /opt/docker/
 
 RUN wget -O /usr/local/bin/php-fpm-healthcheck \

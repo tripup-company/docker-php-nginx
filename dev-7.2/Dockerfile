@@ -1,5 +1,4 @@
 FROM webdevops/php-nginx-dev:7.2
-COPY conf/health.php /app/health.php
 COPY conf/ /opt/docker/
 
 # Install php extentsions
