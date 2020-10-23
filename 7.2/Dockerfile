@@ -19,6 +19,7 @@ RUN apt-get update && apt-get install -y \
     && docker-php-ext-install intl \
     && docker-php-ext-enable memcached \
     && docker-php-ext-install zip
+    && docker-php-ext-install exif
 
 ENV MEMCACHE_HOST memcached
 ENV MEMCACHE_PORT 11211
