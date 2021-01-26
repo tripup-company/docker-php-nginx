@@ -1,4 +1,4 @@
-FROM webdevops/php-nginx:7.3
+FROM webdevops/php-nginx:7.4
 COPY conf/ /opt/docker/
 
 RUN wget -O /usr/local/bin/php-fpm-healthcheck \

@@ -1,4 +1,4 @@
-FROM webdevops/php-nginx-dev:7.3
+FROM webdevops/php-nginx-dev:7.4
 COPY conf/ /opt/docker/
 
 # Install php extentsions
