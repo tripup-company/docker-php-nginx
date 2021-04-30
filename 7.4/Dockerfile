@@ -21,9 +21,6 @@ RUN apt-get update && apt-get install -y \
     && docker-php-ext-install zip \
     && docker-php-ext-install exif
 
-# mute php access log
-RUN go-replace -s 'access.log = /proc/self/fd/2' -r 'access.log = /proc/self/fd/1' /usr/local/etc/php-fpm.d/docker.conf
-
 ENV MEMCACHE_HOST memcached
 ENV MEMCACHE_PORT 11211
 ENV APP_URL_PATH ''
