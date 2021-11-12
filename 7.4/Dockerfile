@@ -10,7 +10,7 @@ RUN echo "deb http://packages.cloud.google.com/apt gcsfuse-jessie main" | tee /e
     curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add -; \
     curl -sL https://deb.nodesource.com/setup_9.x | bash -
 # Install php extentsions
-RUN apt-get update && apt-get install -y \
+RUN apt-get update --allow-releaseinfo-change && apt-get install -y \
     libfreetype6-dev libjpeg62-turbo-dev libpng-dev libicu-dev gcsfuse libmemcached-dev zlib1g-dev libzip-dev libfcgi-bin \
     && docker-php-ext-install -j$(nproc) iconv \
     && docker-php-ext-configure gd --with-freetype=/usr/include/ --with-jpeg=/usr/include/ \
